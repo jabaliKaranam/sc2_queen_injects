@@ -9,7 +9,9 @@ Copy the install location into app.config
 Provide a location for the code to store an image for processing.
 The script only stores 1 image and will keep overwriting it.
 
-Update the rest of app.config as per your preferences. 
+Update the rest of app.config as per your preferences.
+
+x_start & x_offset may need to updated based on your specific screen size and resolution
 
 Install the packages in requirements.txt
 
@@ -25,3 +27,4 @@ Recommendation is to use a hotkey to bind the running of the script to a keyboar
 Use run_injects.bat as the "application" to bind to the hotkey.
 
 The batch file produces a log which might be useful in fixing any issues.
+
