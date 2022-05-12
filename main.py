@@ -9,8 +9,6 @@ import tkinter
 from tkinter import messagebox
 from playsound import playsound
 
-
-
 hatchCount = 1
 config = configparser.ConfigParser()
 config.read("app.config")
@@ -34,7 +32,8 @@ def getHatchCount(imgLoc):
     # Threshold for contrast.
     thresh = 50
     img3 = getBWImg(imgLoc, thresh)
-    img3.show()
+    if(not debug_mode):
+        img3.show()
     hatchCount = pytesseract.image_to_string(img3,
                                              config=('-l eng --oem 3 --psm 10 -c tessedit_char_whitelist=0123456789'))
     if hatchCount != '' and int(hatchCount) >= 1:
@@ -58,7 +57,7 @@ def getBWImg(imgLoc, thresh):
     fn = lambda x: 255 if x > thresh else 0
     # img2 = ImageOps.grayscale(img)
     img = img.convert('L').point(fn, mode='1')
-    img = img.resize((300,200), Image.BICUBIC)
+    img = img.resize((300, 200), Image.BICUBIC)
     return img
 
 
@@ -70,19 +69,20 @@ def main():
     # pyautogui.screenshot(imgLoc, region=(1068, 822, 64, 34))
     # pyautogui.moveTo(hatch_img_postion, 830)
     hatch_img_postion = int(x_start) + (int(x_offset) * (int(hatchery_hotkey) - 1))
-    #If debug mode is enabled, then no new screen shots are taken. Code uses what ever is already present.
-    if(not debug_mode):
+    # If debug mode is enabled, then no new screen shots are taken. Code uses what ever is already present.
+    if (not debug_mode):
         pyautogui.screenshot(imgLoc, region=(hatch_img_postion, 830, 30, 20))
 
     hatchCount = getHatchCount(imgLoc)
     print("Hatch Count : ", hatchCount)
-    if(not debug_mode):
+    if (not debug_mode):
         inject(hatchCount)
+
 
 def inject(hatchCount):
     print("Initiate inject")
-    if(hatchCount > 15):
-        print("Error in process. Detected " + str(hatchCount) +" bases")
+    if (hatchCount > 15):
+        print("Error in process. Detected " + str(hatchCount) + " bases")
         sys.exit()
     try:
         # Center mouse on screen
@@ -108,8 +108,8 @@ def inject(hatchCount):
 
 if __name__ == "__main__":
     if "SC2_x64.exe" or "SC2_x32.exe" in (p.name().lower() for p in psutil.process_iter()):
-        if(continous_run):
-            while(True):
+        if (continous_run):
+            while (True):
                 playsound("beep-07a.wav")
                 playsound("beep-07a.wav")
                 print("Found Starcraft 2. Initiating inject sequence continously")
