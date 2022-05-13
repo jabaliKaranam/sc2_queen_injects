@@ -1,9 +1,10 @@
-Code Script to auto inject hatcheries
+##Code Script to auto inject hatcheries in Starcraft 2
 
 # WARNING: THIS MAY BE ILLEGAL TO USE ON THE LADDER. USE AT YOUR OWN PERIL. I TAKE NO RESPONSIBILITY FOR ANYTHING THIS CODE DOES.
 
 ## Installation
-
+### Download & Run as a windows application
+#### Recomended for most users
 Install Tesseract. Follow instructions found here https://github.com/UB-Mannheim/tesseract/wiki
 
 If you are looking for the executable(exe) file, download the dist folder.
@@ -20,6 +21,30 @@ Under normal circumstances, you should not need to update most values.
 
 x_start & x_offset may need to be updated based on your specific screen size and resolution
 
+**Measuring x_start**
+
+Use the sc2AutoInject_MousePositionHelper tool. Download from here () and run it.
+
+It will show a small window with the X & Y Coordinates of your mouse.
+
+Launch Starcraft 2 in Fullscreen Windowed mode
+
+Start a throwaway game (against an AI).
+
+Create control group 1 and 2
+
+Position your mouse pointer between the Control Group 1 Icon and the Control Group 1 Unit Count
+
+Note down the numbers shown in sc2AutoInject_MousePositionHelper
+
+Do the same for Control Group 2.
+
+The X Coordinate (first number) you got from Control Group 1 will be the x_start value
+
+The difference between the X Coordinates of Group 1 & 2 will be the x_offset value
+
+
+
 If you are using the source code, install the packages in requirements.txt
 If you are using the exe file, you dont need to install the packages
 
@@ -34,14 +59,22 @@ A double beep sound is played just before the inject cycle starts to notify you.
 ### For the exe file
 Recommendation is to use a hotkey bind to the exe file.
 
-Start the game.
+Start the game in windowed fullscreen mode
 
-Hit the hotkey
+Hit the hotkey and watch the magic
+
+_Note: You need to have at least 2 hatcheries and 1 queen bound to the hotkeys specific in app.config_
 
 ### For the source code
 Recommendation is to use a hotkey to bind the running of the script to a keyboard/mouse hotkey
 
 Use run_injects.bat as the "application" to bind to the hotkey.
+
+Start the game in windowed fullscreen mode
+
+Hit the hotkey and watch the magic
+
+_Note: You need to have at least 2 hatcheries and 1 queen bound to the hotkeys specific in app.config_
 
 The batch file produces a log which might be useful in fixing any issues.
 
