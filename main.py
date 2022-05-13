@@ -32,7 +32,8 @@ def getHatchCount(imgLoc):
     # Threshold for contrast.
     thresh = 50
     img3 = getBWImg(imgLoc, thresh)
-    if(not debug_mode):
+    if(debug_mode):
+        print("show image")
         img3.show()
     hatchCount = pytesseract.image_to_string(img3,
                                              config=('-l eng --oem 3 --psm 10 -c tessedit_char_whitelist=0123456789'))
@@ -77,6 +78,7 @@ def main():
     print("Hatch Count : ", hatchCount)
     if (not debug_mode):
         inject(hatchCount)
+    return
 
 
 def inject(hatchCount):
@@ -97,13 +99,16 @@ def inject(hatchCount):
         for i in range(int(hatchCount)):
             # Inject
             pyautogui.hotkey(cycle_base_hotkey, queen_injcet_hotkey)
+            print("Here")
             pyautogui.click()
+            print("Injection ", i)
             time.sleep(float(inject_interval))
-    except Exception as e:
-        print(e)
     except pyautogui.FailSafeException as e:
         print("Mouse moved to corner. Program exiting")
+    except Exception as e:
+        print(e)
     print("inject done")
+    return
 
 
 if __name__ == "__main__":
