@@ -21,7 +21,7 @@ Under normal circumstances, you should not need to update most values.
 
 x_start & x_offset may need to be updated based on your specific screen size and resolution
 
-**Measuring x_start**
+#### Measuring x_start & x_offset
 
 Use the sc2AutoInject_MousePositionHelper tool. Download from here () and run it.
 
@@ -41,12 +41,17 @@ Do the same for Control Group 2.
 
 The X Coordinate (first number) you got from Control Group 1 will be the x_start value
 
+ ![](C:\Users\sirja\Documents\GitHub\sc2_queen_injects\readme_img\get_x_coords.png)
+ ![](C:\Users\sirja\Documents\GitHub\sc2_queen_injects\readme_img\get_x_coords2.png)
+
 The difference between the X Coordinates of Group 1 & 2 will be the x_offset value
 
 
 
-If you are using the source code, install the packages in requirements.txt
-If you are using the exe file, you dont need to install the packages
+
+_If you are using the source code, install the packages in requirements.txt
+
+If you are using the exe file, you dont need to install the packages_
 
 WARNING: Enabling the auto run continuous option can and probably will result in the program running forever.
 If you move your mouse to the corner of the screen, the 
