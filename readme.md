@@ -41,8 +41,9 @@ Do the same for Control Group 2.
 
 The X Coordinate (first number) you got from Control Group 1 will be the x_start value
 
- ![image description](.\readme_img\get_x_coords.png)
- ![image description2](.\readme_img\get_x_coords2.png)
+![get_x_coords](https://user-images.githubusercontent.com/84337220/168389483-874f2d9e-aacf-41d8-b3e6-3e817c57c77b.png)
+![get_x_coords2](https://user-images.githubusercontent.com/84337220/168389489-0c7119ab-a92d-4610-8f63-cad22e505d0b.png)
+
 
 The difference between the X Coordinates of Group 1 & 2 will be the x_offset value
 
