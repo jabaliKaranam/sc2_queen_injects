@@ -41,13 +41,10 @@ Do the same for Control Group 2.
 
 The X Coordinate (first number) you got from Control Group 1 will be the x_start value
 
- ![](.\readme_img\get_x_coords.png)
- ![](.\readme_img\get_x_coords2.png)
+ ![image description](.\readme_img\get_x_coords.png)
+ ![image description2](.\readme_img\get_x_coords2.png)
 
 The difference between the X Coordinates of Group 1 & 2 will be the x_offset value
-
-
-
 
 _If you are using the source code, install the packages in requirements.txt
 
