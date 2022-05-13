@@ -23,7 +23,7 @@ x_start & x_offset may need to be updated based on your specific screen size and
 
 #### Measuring x_start & x_offset
 
-Use the sc2AutoInject_MousePositionHelper tool. Download from here () and run it.
+Use the sc2AutoInject_MousePositionHelper tool. Download from here (https://github.com/jabaliKaranam/sc2AutoInject_MousePositionHelper/tree/main/dist) and run it.
 
 It will show a small window with the X & Y Coordinates of your mouse.
 
