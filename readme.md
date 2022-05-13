@@ -1,6 +1,8 @@
 Code Script to auto inject hatcheries
-#WARNING: THIS MAY BE ILLEGAL TO USE ON THE LADDER. USE AT YOUR OWN PERIL. I TAKE NO RESPONSIBILITY FOR ANYTHING THIS CODE DOES.
-##Installation
+
+# WARNING: THIS MAY BE ILLEGAL TO USE ON THE LADDER. USE AT YOUR OWN PERIL. I TAKE NO RESPONSIBILITY FOR ANYTHING THIS CODE DOES.
+
+## Installation
 
 Install Tesseract. Follow instructions found here https://github.com/UB-Mannheim/tesseract/wiki
 
@@ -21,7 +23,7 @@ In the case you do enable it, alt tabbing out of the game and waiting for 30 sec
 A double beep sound is played just before the inject cycle starts to notify you.
 
 
-##Usage
+## Usage
 Recommendation is to use a hotkey to bind the running of the script to a keyboard/mouse hotkey
 
 Use run_injects.bat as the "application" to bind to the hotkey.
