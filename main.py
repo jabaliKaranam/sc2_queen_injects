@@ -24,6 +24,9 @@ x_start = config["data"]["x_start"]
 x_offset = config["data"]["x_offset"]
 continous_run = config["data"].getboolean("auto_run_continuous")
 auto_run_inject_interval = config["data"].getint("auto_run_inject_interval")
+y_axis = config["data"].getint("y_axis")
+scrn_height = config["data"].getint("scrn_height")
+scrn_width = config["data"].getint("scrn_width")
 
 pytesseract.pytesseract.tesseract_cmd = tesseract_location
 
@@ -72,7 +75,7 @@ def main():
     hatch_img_postion = int(x_start) + (int(x_offset) * (int(hatchery_hotkey) - 1))
     # If debug mode is enabled, then no new screen shots are taken. Code uses what ever is already present.
     if (not debug_mode):
-        pyautogui.screenshot(imgLoc, region=(hatch_img_postion, 830, 30, 20))
+        pyautogui.screenshot(imgLoc, region=(hatch_img_postion, y_axis, scrn_height, scrn_width))
 
     hatchCount = getHatchCount(imgLoc)
     print("Hatch Count : ", hatchCount)
