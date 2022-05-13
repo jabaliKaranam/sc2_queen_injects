@@ -1,5 +1,5 @@
 Code Script to auto inject hatcheries
-
+#WARNING: THIS MAY BE ILLEGAL TO USE ON THE LADDER. USE AT YOUR OWN PERIL. I TAKE NO RESPONSIBILITY FOR ANYTHING THIS CODE DOES.
 ##Installation
 
 Install Tesseract. Follow instructions found here https://github.com/UB-Mannheim/tesseract/wiki
