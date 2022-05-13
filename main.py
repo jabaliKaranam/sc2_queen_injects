@@ -13,6 +13,7 @@ hatchCount = 1
 config = configparser.ConfigParser()
 config.read("app.config")
 debug_mode = config["data"].getboolean("debug_mode")
+show_bw_img = config["data"].getboolean("show_bw_img")
 tesseract_location = config["data"]["tesseract_location"]
 image_name = config["data"]["image_name"]
 hatchery_hotkey = config["data"]["hatchery_hotkey"]
@@ -35,7 +36,7 @@ def getHatchCount(imgLoc):
     # Threshold for contrast.
     thresh = 50
     img3 = getBWImg(imgLoc, thresh)
-    if(debug_mode):
+    if(debug_mode and show_bw_img):
         print("show image")
         img3.show()
     hatchCount = pytesseract.image_to_string(img3,
