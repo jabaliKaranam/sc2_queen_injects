@@ -15,7 +15,8 @@ Update the rest of app.config as per your preferences.
 
 x_start & x_offset may need to updated based on your specific screen size and resolution
 
-Install the packages in requirements.txt
+If you are using the source code, install the packages in requirements.txt
+If you are using the exe file, you dont need to install the packages
 
 WARNING: Enabling the auto run continuous option can and probably will result in the program running forever.
 If you move your mouse to the corner of the screen, the 
@@ -24,9 +25,12 @@ A double beep sound is played just before the inject cycle starts to notify you.
 
 
 ## Usage
+### For the source code
 Recommendation is to use a hotkey to bind the running of the script to a keyboard/mouse hotkey
 
 Use run_injects.bat as the "application" to bind to the hotkey.
 
 The batch file produces a log which might be useful in fixing any issues.
 
+### For the exe file
+Recommendation is to use a hotkey bind to the exe file. 
